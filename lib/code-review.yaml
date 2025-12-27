@@ -1,0 +1,7 @@
+models:
+  - name: Code-Reviewer
+    provider: ollama
+    model: codellama:13b
+    systemMessage: |
+      You are a senior code reviewer.
+      Focus on code quality, security, and best practices.

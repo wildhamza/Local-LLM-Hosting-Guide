@@ -1,0 +1,13 @@
+﻿{
+  "host": "127.0.0.1",
+  "port": 11434,
+  "gpu": true,
+  "num_gpu": 1,
+  "num_thread": 4,
+  "num_ctx": 4096,
+  "models": "/home/$USER/.ollama/models",
+  "environment_variables": {
+    "OLLAMA_NUM_PARALLEL": "1",
+    "OLLAMA_MAX_LOADED_MODELS": "2"
+  }
+}

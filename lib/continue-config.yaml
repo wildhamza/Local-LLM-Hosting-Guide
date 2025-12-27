@@ -1,0 +1,116 @@
+﻿name: AI Development Workspace
+version: 1.0.0
+schema: v1
+
+# Model Configuration
+models:
+  - name: Qwen2.5-Coder-7B
+    provider: ollama
+    model: qwen2.5-coder:7b
+    apiBase: http://localhost:11434
+    contextLength: 8192
+    roles:
+      - chat
+      - edit
+      - apply
+    completionOptions:
+      temperature: 0.2
+      topP: 0.95
+      topK: 40
+      maxTokens: 2048
+
+  - name: Fast-Autocomplete
+    provider: ollama
+    model: qwen2.5-coder:1.5b
+    apiBase: http://localhost:11434
+    roles:
+      - autocomplete
+    completionOptions:
+      temperature: 0.1
+      maxTokens: 128
+
+  - name: General-Chat
+    provider: ollama
+    model: llama3.1:8b
+    apiBase: http://localhost:11434
+    roles:
+      - chat
+    completionOptions:
+      temperature: 0.7
+
+  - name: Embeddings
+    provider: ollama
+    model: nomic-embed-text:latest
+    apiBase: http://localhost:11434
+    roles:
+      - embed
+
+# Model Selection
+defaultModel: Qwen2.5-Coder-7B
+tabAutocompleteModel: Fast-Autocomplete
+
+# System Prompt
+systemMessage: |
+  You are Qwen2.5 Coder 7B, an AI programming assistant running locally via Ollama.
+  You help with coding tasks, debugging, code review, and explanations.
+  
+  Guidelines:
+  1. Provide concise, accurate code solutions
+  2. Explain your reasoning when helpful
+  3. Write clean, efficient, well-documented code
+  4. Consider edge cases and error handling
+  5. Suggest improvements and alternatives
+
+# Slash Commands
+slashCommands:
+  - name: explain
+    description: Explain the selected code
+    prompt: Explain this code in detail. What does it do? How does it work?
+
+  - name: refactor
+    description: Refactor the selected code
+    prompt: Refactor this code to be more efficient, readable, and maintainable.
+
+  - name: debug
+    description: Debug the selected code
+    prompt: Find and fix bugs in this code. Explain what was wrong.
+
+  - name: test
+    description: Write tests for the selected code
+    prompt: Write comprehensive unit tests for this code.
+
+  - name: document
+    description: Add documentation
+    prompt: Add comprehensive documentation and comments to this code.
+
+  - name: optimize
+    description: Optimize performance
+    prompt: Optimize this code for better performance and memory usage.
+
+# Context Providers
+contextProviders:
+  - name: file
+    params:
+      maxChars: 10000
+  - name: terminal
+    params:
+      maxOutputLength: 2000
+  - name: diff
+  - name: http
+  - name: database
+
+# UI Settings
+ui:
+  theme: dark
+  fontSize: 14
+  showFileTree: true
+  autoScroll: true
+
+# Experimental Features
+experimental:
+  disableSessionTitles: false
+  enableCodebaseIndexing: true
+  enableVoiceCommands: false
+
+# Telemetry (Optional)
+allowAnonymousTelemetry: false

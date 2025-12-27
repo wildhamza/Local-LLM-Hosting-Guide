@@ -1,0 +1,16 @@
+﻿{
+  "nvidia": {
+    "visible_devices": "0",
+    "memory_limit": "6144MiB",
+    "compute_capability": "7.5"
+  },
+  "amd": {
+    "visible_devices": "0",
+    "memory_limit": "6144MiB",
+    "gpu_type": "rx6700xt"
+  },
+  "cuda": {
+    "version": "12.1",
+    "arch": "sm_75"
+  }
+}

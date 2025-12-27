@@ -1,0 +1,17 @@
+﻿{
+  "continue.useConfigFile": true,
+  "continue.configPath": "/home/$USER/.continue/config.yaml",
+  "continue.showTerminal": true,
+  "continue.enableTabAutocomplete": true,
+  "continue.tabAutocompleteDelay": 300,
+  "continue.maxPromptLength": 12000,
+  "continue.enableCodebaseIndexing": true,
+  "continue.codebaseIndexingDirectory": "/home/$USER/projects",
+  
+  "continue.keybindings": {
+    "toggleContinue": "ctrl+l",
+    "focusContinueInput": "ctrl+i",
+    "acceptAutocomplete": "tab",
+    "toggleAutocomplete": "ctrl+space"
+  }
+}

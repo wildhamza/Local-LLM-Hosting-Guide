@@ -1,0 +1,14 @@
+﻿# Model loading
+loader: ExLlamaV2
+model_dir: /home/$USER/models
+max_seq_len: 4096
+compress_pos_emb: 1.0
+
+# GPU settings
+gpu_memory_0: 6144  # VRAM in MB for first GPU
+cpu_memory: 8192    # RAM in MB for offloading
+n_gpu_layers: 40    # Layers on GPU (adjust based on VRAM)
+
+# Performance
+threads: 8
+batch_size: 8

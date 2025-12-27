@@ -1,0 +1,7 @@
+models:
+  - name: Development-Assistant
+    provider: ollama
+    model: qwen2.5-coder:7b
+    systemMessage: |
+      You are helping with active development.
+      Focus on implementation, debugging, and testing.
