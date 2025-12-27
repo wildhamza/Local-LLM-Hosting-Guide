@@ -1,6 +1,6 @@
 # Local LLM Hosting Guide (Offline AI Dev)
 
-[![License](https://img.shields.io/github/license/wildhamza/Local-LLM-Hosting-Guide)](./LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Last Commit](https://img.shields.io/github/last-commit/wildhamza/Local-LLM-Hosting-Guide)](../../commits/main)
 [![Repo Size](https://img.shields.io/github/repo-size/wildhamza/Local-LLM-Hosting-Guide)](../../)
 
