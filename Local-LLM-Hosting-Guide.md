@@ -90,12 +90,80 @@ All code snippets referenced in this guide are included under [`lib/`](./lib/):
 - Be mindful of what you paste:
   - Local models won’t “phone home”, but anything you paste is still stored in your editor history, terminal history, and potentially in Continue session history.
 
-## Publishing Checklist (Recommended)
+## Contributing
 
-- Add screenshots (VS Code + Continue panel, Ollama running, model list).
-- Add a LICENSE file (MIT/Apache-2.0 are common).
-- Add a short CONTRIBUTING guide (how to report issues + what logs to include).
-- Consider adding a “known-good models” list for specific VRAM/RAM tiers.
+We welcome contributions! Here's how to report issues and contribute effectively.
+
+### Reporting Issues
+
+When reporting issues, please include:
+1. **Environment Details**:
+   - OS and version
+   - GPU/CPU model and VRAM/RAM
+   - Ollama/LM Studio version
+   - VS Code version
+   - Continue extension version
+
+2. **Steps to Reproduce**:
+   - Clear, step-by-step instructions
+   - Commands used and their output
+   - Any error messages (copy-paste exact text)
+
+3. **Logs to Include**:
+   - Ollama logs: `journalctl -u ollama -n 50` (Linux) or check Ollama's logs folder
+   - VS Code logs: Help > Toggle Developer Tools > Console
+   - Continue logs: Found in `~/.continue/continue.log`
+   - GPU utilization: `nvidia-smi` (if using NVIDIA GPU)
+
+### Pull Requests
+
+1. Fork the repository and create a feature branch
+2. Ensure your code follows existing style
+3. Update documentation if needed
+4. Test your changes thoroughly
+5. Submit a pull request with a clear description
+
+## Known-Good Models by Hardware Tier
+
+### Low-End Hardware (4GB VRAM / 8GB RAM)
+- **Coding**:
+  - `qwen2.5-coder:1.5b` - Fastest option for basic coding
+  - `starcoder2:3b` - Good balance of speed and capability
+- **General Use**:
+  - `phi3:mini` - Surprisingly capable for its size
+  - `tinyllama:latest` - Very fast, good for testing
+
+### Mid-Range Hardware (8GB VRAM / 16GB RAM)
+- **Coding**:
+  - `qwen2.5-coder:7b` - Excellent code generation
+  - `codellama:7b` - Strong all-around coder
+  - `deepseek-coder:6.7b` - Great for complex tasks
+- **General Use**:
+  - `llama3.1:8b` - Strong reasoning
+  - `qwen2.5:7b` - Good multilingual support
+
+### High-End Hardware (12GB+ VRAM / 32GB+ RAM)
+- **Coding**:
+  - `codellama:34b` - Top-tier code generation
+  - `qwen2.5-coder:14b` - Excellent for complex tasks
+  - `deepseek-coder:33b` - Best for large codebases
+- **General Use**:
+  - `llama3.1:70b` - Exceptional reasoning
+  - `qwen2.5:72b` - Best multilingual support
+
+### CPU-Only Systems
+- **Coding**:
+  - `phi2:latest` - Best for CPU-based coding
+  - `tinyllama:latest` - Fastest on CPU
+- **General Use**:
+  - `qwen2.5:0.5b` - Lightweight but capable
+  - `llama3.1:1.8b` - Good balance for CPU
+
+### Quantization Recommendations
+- **4GB VRAM**: Q4_K_M or Q3_K_M
+- **8GB VRAM**: Q4_K_M (7B models), Q3_K_M (13B models)
+- **12GB+ VRAM**: Q5_K_M or Q6_K for best quality
+- **CPU Systems**: Q4_K_M for best speed/quality balance
 
 ## Table of Contents
 1. [Understanding Your Options](#understanding-your-options)
