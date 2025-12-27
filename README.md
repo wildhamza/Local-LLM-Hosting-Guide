@@ -2,7 +2,6 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Last Commit](https://img.shields.io/github/last-commit/wildhamza/Local-LLM-Hosting-Guide)](../../commits/main)
-[![Repo Size](https://img.shields.io/github/repo-size/wildhamza/Local-LLM-Hosting-Guide)](../../)
 
 Researched & written by **Hamza Ali** — Full Stack Web & App Developer with an interest in AI (limited only by the tech hardware at hand).
 
