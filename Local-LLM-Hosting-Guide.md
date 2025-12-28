@@ -1502,6 +1502,3 @@ Contributions are welcome.
 - **Docs improvements**: PRs that clarify platform differences (Windows vs Linux vs macOS) are especially helpful.
 - **New models / configs**: include rationale (VRAM/RAM target) and sane defaults.
 
-## License
-
-Choose a license and add it to the repository (common choices: MIT, Apache-2.0).
